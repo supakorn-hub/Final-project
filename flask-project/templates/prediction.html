@@ -1,0 +1,29 @@
+{% extends 'base_layout.html' %}
+{% block body %}
+<style>
+    h1,p,a {
+        text-align: center;
+    }
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<div class="col-md-12">
+    <div class="touch">
+        <div class="card text-left">
+            <div class="card-body">
+                <h1>Prediction</h1>
+                <img src="{{pic}}" align="middle"width="625" height="525" />
+                <br>
+                <br>                
+                <p>This player is&nbsp;{{ pred_result['predictions'][0]['label'] }}</p>
+                <p>Acuuracy Prediction&nbsp;{{ pred_result['predictions'][0]['confidence'] }}</p>
+                <a href="/" class="btn btn-dark btn-sm">Home</a>
+                <a href="/scan" class="btn btn-dark btn-sm">predict predict again</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
