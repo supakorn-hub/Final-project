@@ -1,0 +1,42 @@
+{% extends 'base_layout.html' %}
+{% block body %}
+<div class="mt">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="touch">
+        <div class="card text-center">
+          <div class="card-body">
+            <table class="table table-bordered border-primary table-danger">
+                <tr>
+                  <th>FIFA RANK</th>
+                  <th>FLAG</th>
+                  <th>Name</th>
+                  <th>Nickname</th>
+                  <th>Manager</th>
+                  <th>FIFA Point</th>
+                  <th>Confederation</th>
+                  <th>Star-player</th>
+                </tr>
+              <tbody style="background-color: white">
+                {% for i in data %}
+                <tr>
+                   <td class="card-text">{{i.ranking}}</p>
+                    <td><img src="{{i.pic}}" class="img-fluid" alt="no image" style="width:100%; height:100%;"></img></td>
+                    <td class="card-text">{{i.name}}</td>
+                    <td class="card-text">{{i.nickname}}</td>
+                    <td class="card-text">{{i.manager}}</td>
+                    <td class="card-text">{{i.point}}</td>
+                    <td class="card-text">{{i.continental}}</td>
+                    <td class="card-text">{{i.player}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
