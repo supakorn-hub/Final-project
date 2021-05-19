@@ -1,0 +1,182 @@
+openapi: 3.0.0
+info:
+  title: FIFA International Ranking
+  version: 1.0.0
+paths:
+  /InternationalTeam:
+    get:
+      parameters: 
+        - in: query
+          name: name
+          description: All International Team Description
+          required: false
+          schema:
+            type: string
+            example: "Belgium"
+      responses:
+        '200':
+          description: this is a description of international team
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    Ranking:
+                      type: number
+                      example: 1
+                    Name:
+                      type: string
+                      example: "Belgium"
+                    Nickname:
+                      type: string
+                      example: "The Red Devils"
+                    Point:
+                      type: number
+                      example: 1783.38
+                    Continental:
+                      type: string
+                      example: "Europe"
+                    Star-Player:
+                      type: string
+                      example: "Eden Hazard"           
+    post:
+      security:
+        - Authentication: []
+      description: Add a team to the list
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InternationalTeam'
+      responses:
+        '200':
+          description: A new team has been added.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "A new team has been added."
+        '500':
+          description: A new team can't add.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "A new team can't add."
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+    delete:
+      security:
+        - Authentication: []
+      description: Delete team
+      parameters: 
+        - in: query
+          name: name
+          required: true
+          schema:
+            type: string
+            example: Belgium
+      responses:
+        '200':
+          description: This team has been deleted.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "That team has been deleted."
+        '500':
+            description: This team not found.
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    message:
+                      type: string
+                      example: "Cannot find this team."
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+    put:
+      security:
+        - Authentication: []
+      parameters: 
+        - in: query
+          name: name
+          required: true
+          schema:
+            type: string
+            example: Belgium
+      description: Update team
+      requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternationalTeam'
+      responses:
+        '200':
+          description: Team has been updated.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Team has been updated."
+        '500':
+          description: Team not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Cannot find this team."
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+                      
+components:
+  securitySchemes:
+    Authentication:     # <-- arbitrary name for the security scheme
+      type: http
+      scheme: basic
+  schemas:
+    InternationalTeam:
+      type: object
+      properties:
+        Ranking:
+            type: number
+            example: 1
+        Name:
+            type: string
+            example: "Belgium"
+        Nickname:
+            type: string
+            example: "The Red Devils"
+        Point:
+            type: number
+            example: 1783.38
+        Continental:
+            type: string
+            example: "Europe"
+        Star-Player:
+            type: string
+            example: "Eden Hazard"    
+  responses:
+    UnauthorizedError:
+      description: Authentication information is missing or invalid
+      headers:
+        WWW_Authenticate:
+          schema:
+            type: string  
