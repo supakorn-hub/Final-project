@@ -1,0 +1,48 @@
+{
+    "doc_id": "7d47d591-8e9e-4cc1-ad4a-38d4eaccf0ad",
+    "doc_name": "FOOTBALLER",
+    "doc_version": "bb40625f6447032524773787e37b6a21",
+    "format": "tf",
+    "version": 13,
+    "inputs": {
+        "Image": {
+            "dtype": "float32",
+            "shape": [
+                null,
+                224,
+                224,
+                3
+            ],
+            "name": "Image:0"
+        }
+    },
+    "outputs": {
+        "Confidences": {
+            "dtype": "float32",
+            "shape": [
+                null,
+                35
+            ],
+            "name": "7d47d591-8e9e-4cc1-ad4a-38d4eaccf0ad.402b5faf-2952-4844-b313-3f8883c14d5f/dense_2/Softmax:0"
+        }
+    },
+    "tags": [
+        "serve"
+    ],
+    "classes": {
+        "Label": [
+            "Eden Hazard",
+            "Kylian Mbappe",
+            "Neymar da Silva Santos Júnior",
+            "Harry Kane",
+            "Cristiano Ronaldo",
+            "Sergio Ramos",
+            "Gianluigi Buffon",
+            "Lionel Messi",
+            "Luis Suarez",
+            "Christian Eriksen" 
+        ]
+    },
+    "filename": "saved_model.pb",
+    "export_model_version": 1
+}
