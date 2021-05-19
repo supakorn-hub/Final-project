@@ -1,0 +1,102 @@
+[
+    {
+        "ranking": 1,
+        "pic": "https://img.fifa.com/image/upload/t_fe-auto/assets/img/flags/4/BEL.png",
+        "name": "Belgium",
+        "nickname": "The Red Devils",
+        "manager": "Roberto Martinez",
+        "point": 1783.38,
+        "continental": "EUFA",
+        "player": "Eden Hazard"
+    },
+    {
+        "ranking": 2,
+        "pic": "https://img.fifa.com/image/upload/t_fe-auto/assets/img/flags/4/FRA.png",
+        "name": "France",
+        "nickname": "The blues",
+        "manager": "Didier Claude Deschamps",
+        "point": 1757.3,
+        "continental": "EUFA",
+        "player": "Kylian Mbappe"
+    },
+    {
+        "ranking": 3,
+        "pic": "https://img.fifa.com/image/upload/t_fe-auto/assets/img/flags/4/BRA.png",
+        "name": "Brazil",
+        "nickname": "Little canary",
+        "manager": "Tite",
+        "point": 1742.65,
+        "continental": "CONMEBOL",
+        "player": "Neymar da Silva Santos Junior"
+    },
+    {
+        "ranking": 4,
+        "pic": "https://img.fifa.com/image/upload/t_fe-auto/assets/img/flags/4/ENG.png",
+        "name": "England",
+        "nickname": "The Three Lions",
+        "manager": "Gareth Southgate",
+        "point": 1686.78,
+        "continental": "EUFA",
+        "player": "Harry Kane"
+    },
+    {
+        "ranking": 5,
+        "pic": "https://img.fifa.com/image/upload/t_fe-auto/assets/img/flags/4/POR.png",
+        "name": "Portugal",
+        "nickname": "Seleccao das Quinas",
+        "manager": "Fernando Santos",
+        "point": 1666.12,
+        "continental": "EUFA",
+        "player": "Cristiano Ronaldo"
+    },
+    {
+        "ranking": 6,
+        "pic": "https://img.fifa.com/image/upload/t_fe-auto/assets/img/flags/4/ESP.png",
+        "name": "Spain",
+        "nickname": "The Red Fury",
+        "manager": "Luis Enrique",
+        "point": 1646.13,
+        "continental": "EUFA",
+        "player": "Sergio Ramos"
+    },
+    {
+        "ranking": 7,
+        "pic": "https://img.fifa.com/image/upload/t_fe-auto/assets/img/flags/4/ITA.png",
+        "name": "Italy",
+        "nickname": "Azzurri",
+        "manager": "Roberto Mancini",
+        "point": 1642.06,
+        "continental": "EUFA",
+        "player": "Gianluigi Buffon"
+    },
+    {
+        "ranking": 8,
+        "pic": "https://img.fifa.com/image/upload/t_fe-auto/assets/img/flags/4/ARG.png",
+        "name": "Argentina",
+        "nickname": "The White and Sky Blues",
+        "manager": "Lionel Sebastian Scaloni",
+        "point": 1641.95,
+        "continental": "CONMEBOL",
+        "player": "Lionel Messi"
+    },
+    {
+        "ranking": 9,
+        "pic": "https://img.fifa.com/image/upload/t_fe-auto/assets/img/flags/4/URU.png",
+        "name": "Uruguay",
+        "nickname": "The Olympic Sky Blue",
+        "manager": "Oscar Tabarez",
+        "point": 1639.08,
+        "continental": "CONMEBOL",
+        "player": "Luis Suarez"
+    },
+    {
+        "ranking": 10,
+        "pic": "https://img.fifa.com/image/upload/t_fe-auto/assets/img/flags/4/DEN.png",
+        "name": "Denmark",
+        "nickname": "Danish Dynamite",
+        "manager": "Kasper Hjulmand",
+        "point": 1631.55,
+        "continental": "EUFA",
+        "player": "Christian Eriksen"
+    }
+]
